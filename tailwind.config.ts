@@ -63,11 +63,16 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			borderRadius: {
+			borderRadius: { // These will use the new --radius value (0.75rem)
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: { // This section can be extended if you want to use Tailwind's font utilities directly, e.g. font-sans.
+                          // However, the current index.css setup with .font-body and .font-heading applying var(--font-body) and var(--font-heading) is already effective.
+                          // If you want Tailwind's default `font-sans` to be "Nunito Sans", you could add:
+                          // sans: ['var(--font-body)', 'sans-serif'], // Ensure --font-body is defined in CSS
+            },
 			keyframes: {
 				'accordion-down': {
 					from: {
